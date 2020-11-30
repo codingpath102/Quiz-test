@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --hue-neutral: rgb(72, 182, 255);
+    --hue-wrong: rgb(255, 38, 0);
+    --hue-correct: rgb(62, 255, 95);
+}
+
+
+
+body{
+    --hue: var(--hue-neutral);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hue-neutral);
+}
+body.correct{
+    background: var(--hue-correct);
+}
+body.wrong{
+    background: var(--hue-wrong);
+}
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    margin: 10px 0px 10px 0px;
+}
+.btn{
+    background-color: rgb(5, 189, 189);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(4, 179, 120);
+}
+
+.btn.correct{
+    background-color: var(--hue-correct);
+}
+.btn.wrong{
+    background-color: var(--hue-wrong);
+}
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hide{
+    display: none;
+}
